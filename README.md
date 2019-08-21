@@ -17,10 +17,10 @@ A continuación, cargaremos nuestras imágenes y anotaciones en el archivo custo
 
 ```
 ## Entrenamos un nuevo modelo a partir de pesas COCO pre-entrenadas
-python3 custom.py train --dataset = / path / al / datasetfolder --weights = coco
+python3 custom.py train --dataset = /path/al/datasetfolder --weights = coco
 
 ## Reanudamos el entrenamiento de un modelo que había entrenado anteriormente
-python3 custom.py train --dataset = / path / al / datasetfolder --weights = last
+python3 custom.py train --dataset = /path/al/datasetfolder --weights = last
 ```
 
 Yo usé un GPU (collab) y entrené el modelo durante 10 épocas en 20-30 minutos.
