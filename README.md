@@ -13,7 +13,19 @@ Una vez que haya creado todas las anotaciones, se procede a descargar la anotaci
 # Paso 3: Entrenando un modelo
 Se inicia clonando el repositorio 'Matterport Mask R-CNN':  https://github.com/matterport/Mask_RCNN .
 
-A continuación, cargaremos nuestras imágenes y anotaciones en el archivo custom.py:
+A continuación, cargaremos nuestras imágenes y anotaciones en el archivo custom.py y ejecutamos:
 
+```
+## Entrenamos un nuevo modelo a partir de pesas COCO pre-entrenadas
+python3 custom.py train --dataset = / path / al / datasetfolder --weights = coco
+
+## Reanudamos el entrenamiento de un modelo que había entrenado anteriormente
+python3 custom.py train --dataset = / path / al / datasetfolder --weights = last
+```
+
+Yo usé un GPU (collab) y entrené el modelo durante 10 épocas en 20-30 minutos.
+
+# Paso 4: Ejecute el modelo en imágenes y haga predicciones
+Usar el notebook inferencia_de_modelo  para ejecutar el modelo en imágenes del conjunto de prueba/val y vea las predicciones del modelo. 
 
 
